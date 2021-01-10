@@ -43,20 +43,20 @@ module.exports = {
                 list: [
                   '...',
                   {
-			        			tag: 'img',
-			        			attribute: 'data-src',
-			        			type: 'src'
-			        		},
+                    tag: 'img',
+                    attribute: 'data-src',
+                    type: 'src'
+                  },
                   {
                     tag: 'img',
                     attribute: 'data-srcset',
                     type: 'srcset'
                   },
                   {
-   		        			tag: 'source',
-   		        			attribute: 'data-srcset',
-   		        			type: 'srcset'
-   		        		}
+                    tag: 'source',
+                    attribute: 'data-srcset',
+                    type: 'srcset'
+                  }
                 ]
               }
             }
