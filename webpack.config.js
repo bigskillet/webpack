@@ -27,7 +27,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: process.env.NODE_ENV == 'production'
-      ? 'assets/[name]-[contenthash:8].js'
+      ? 'assets/[name].[contenthash:8].js'
       : 'assets/[name].js',
     publicPath: '/'
   },
@@ -78,7 +78,7 @@ module.exports = {
         loader: 'file-loader',
         options: {
           name: process.env.NODE_ENV == 'production'
-            ? 'assets/[name]-[contenthash:8].[ext]'
+            ? 'assets/[name].[contenthash:8].[ext]'
             : 'assets/[name].[ext]'
         }
       }
@@ -102,7 +102,7 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: process.env.NODE_ENV == 'production'
-        ? 'assets/[name]-[contenthash:8].css'
+        ? 'assets/[name].[contenthash:8].css'
         : 'assets/[name].css'
     }),
     ...pages
