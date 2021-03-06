@@ -95,7 +95,7 @@ module.exports = {
       patterns: [
         {
           from: 'src/assets/static/**/*',
-          to: 'assets/[name].[ext]',
+          to: 'assets/[name][ext]',
           noErrorOnMissing: true
         }
       ]
