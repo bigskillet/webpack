@@ -39,7 +39,7 @@ module.exports = {
           {
             loader: 'html-loader',
             options: {
-              attributes: {
+              sources: {
                 list: [
                   '...',
                   {
@@ -49,11 +49,6 @@ module.exports = {
                   },
                   {
                     tag: 'img',
-                    attribute: 'data-srcset',
-                    type: 'srcset'
-                  },
-                  {
-                    tag: 'source',
                     attribute: 'data-srcset',
                     type: 'srcset'
                   }
@@ -74,12 +69,12 @@ module.exports = {
         ]
       },
       {
-        test: /\.(svg|png|jpg|woff2)$/,
-        loader: 'file-loader',
-        options: {
-          name: process.env.NODE_ENV == 'production'
-            ? 'assets/[name].[contenthash:8].[ext]'
-            : 'assets/[name].[ext]'
+        test: /\.(svg|png|jpg|woff2|xml|webmanifest)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: process.env.NODE_ENV == 'production'
+            ? 'assets/[name].[contenthash:8][ext]'
+            : 'assets/[name][ext]'
         }
       }
     ]
